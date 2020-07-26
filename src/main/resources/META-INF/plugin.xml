@@ -1,0 +1,23 @@
+<idea-plugin>
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.idea.maven</depends>
+
+    <!-- description, version, since-build, until-build and changelog are patched -->
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <junitPatcher
+                implementation="de.waitpermission.more_maven_properties.MoreMavenPropertiesJUnitPatcher"/>
+    </extensions>
+    <id>de.waitpermission.more_maven_properties</id>
+
+    <name>More Maven properties</name>
+
+    <vendor email="jkloos+plugin@waitpermission.de">Johannes Kloos</vendor>
+</idea-plugin>
